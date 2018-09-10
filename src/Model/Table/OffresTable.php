@@ -43,7 +43,7 @@ class OffresTable extends Table
         $this->addBehavior('Timestamp');
 
         $this->belongsTo('Milieux', [
-            'foreignKey' => 'milieu_id',
+            'foreignKey' => 'environment_id',
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Candidatures', [
@@ -98,7 +98,7 @@ class OffresTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['milieu_id'], 'Milieux'));
+        $rules->add($rules->existsIn(['environment_id'], 'Milieux'));
 
         return $rules;
     }

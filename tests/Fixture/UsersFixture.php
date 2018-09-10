@@ -50,8 +50,8 @@ class UsersFixture extends TestFixture
                 'program' => 'Lorem ipsum dolor sit amet',
                 'age' => 1,
                 'slug' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-09-10 18:32:40',
-                'modified' => '2018-09-10 18:32:40'
+                'created' => '2018-09-10 20:33:11',
+                'modified' => '2018-09-10 20:33:11'
             ],
         ];
         parent::init();

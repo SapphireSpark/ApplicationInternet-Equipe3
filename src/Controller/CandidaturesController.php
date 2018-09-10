@@ -21,7 +21,7 @@ class CandidaturesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Offres', 'Users']
+            'contain' => ['Offers', 'Users']
         ];
         $candidatures = $this->paginate($this->Candidatures);
 
@@ -38,7 +38,7 @@ class CandidaturesController extends AppController
     public function view($id = null)
     {
         $candidature = $this->Candidatures->get($id, [
-            'contain' => ['Offres', 'Users']
+            'contain' => ['Offers', 'Users']
         ]);
 
         $this->set('candidature', $candidature);
@@ -61,9 +61,9 @@ class CandidaturesController extends AppController
             }
             $this->Flash->error(__('The candidature could not be saved. Please, try again.'));
         }
-        $offres = $this->Candidatures->Offres->find('list', ['limit' => 200]);
+        $offers = $this->Candidatures->Offers->find('list', ['limit' => 200]);
         $users = $this->Candidatures->Users->find('list', ['limit' => 200]);
-        $this->set(compact('candidature', 'offres', 'users'));
+        $this->set(compact('candidature', 'offers', 'users'));
     }
 
     /**
@@ -87,9 +87,9 @@ class CandidaturesController extends AppController
             }
             $this->Flash->error(__('The candidature could not be saved. Please, try again.'));
         }
-        $offres = $this->Candidatures->Offres->find('list', ['limit' => 200]);
+        $offers = $this->Candidatures->Offers->find('list', ['limit' => 200]);
         $users = $this->Candidatures->Users->find('list', ['limit' => 200]);
-        $this->set(compact('candidature', 'offres', 'users'));
+        $this->set(compact('candidature', 'offers', 'users'));
     }
 
     /**

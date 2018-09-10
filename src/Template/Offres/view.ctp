@@ -11,8 +11,6 @@
         <li><?= $this->Form->postLink(__('Delete Offre'), ['action' => 'delete', $offre->id], ['confirm' => __('Are you sure you want to delete # {0}?', $offre->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Offres'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Offre'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Milieux'), ['controller' => 'Milieux', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Milieux'), ['controller' => 'Milieux', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Candidatures'), ['controller' => 'Candidatures', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Candidature'), ['controller' => 'Candidatures', 'action' => 'add']) ?> </li>
     </ul>
@@ -20,10 +18,6 @@
 <div class="offres view large-9 medium-8 columns content">
     <h3><?= h($offre->name) ?></h3>
     <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Milieux') ?></th>
-            <td><?= $offre->has('milieux') ? $this->Html->link($offre->milieux->name, ['controller' => 'Milieux', 'action' => 'view', $offre->milieux->id]) : '' ?></td>
-        </tr>
         <tr>
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($offre->name) ?></td>
@@ -39,6 +33,10 @@
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($offre->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Environment Id') ?></th>
+            <td><?= $this->Number->format($offre->environment_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Jobs Open') ?></th>

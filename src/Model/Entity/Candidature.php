@@ -6,13 +6,13 @@ use Cake\ORM\Entity;
 /**
  * Candidature Entity
  *
- * @property int $offre_id
+ * @property int $environment_id
  * @property int $user_id
  * @property string $slug
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \App\Model\Entity\Offre $offre
+ * @property \App\Model\Entity\Offer $offer
  * @property \App\Model\Entity\User $user
  */
 class Candidature extends Entity
@@ -31,7 +31,7 @@ class Candidature extends Entity
         'slug' => true,
         'created' => true,
         'modified' => true,
-        'offre' => true,
+        'offer' => true,
         'user' => true
     ];
 }

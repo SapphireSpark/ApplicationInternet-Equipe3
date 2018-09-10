@@ -56,7 +56,7 @@
         <?php if (!empty($user->candidatures)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Offre Id') ?></th>
+                <th scope="col"><?= __('Environment Id') ?></th>
                 <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col"><?= __('Slug') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
@@ -65,7 +65,7 @@
             </tr>
             <?php foreach ($user->candidatures as $candidatures): ?>
             <tr>
-                <td><?= h($candidatures->offre_id) ?></td>
+                <td><?= h($candidatures->environment_id) ?></td>
                 <td><?= h($candidatures->user_id) ?></td>
                 <td><?= h($candidatures->slug) ?></td>
                 <td><?= h($candidatures->created) ?></td>

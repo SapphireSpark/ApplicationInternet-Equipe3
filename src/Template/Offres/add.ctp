@@ -8,8 +8,6 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Offres'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Milieux'), ['controller' => 'Milieux', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Milieux'), ['controller' => 'Milieux', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Candidatures'), ['controller' => 'Candidatures', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Candidature'), ['controller' => 'Candidatures', 'action' => 'add']) ?></li>
     </ul>
@@ -19,7 +17,7 @@
     <fieldset>
         <legend><?= __('Add Offre') ?></legend>
         <?php
-            echo $this->Form->control('milieu_id', ['options' => $milieux]);
+            echo $this->Form->control('environment_id');
             echo $this->Form->control('name');
             echo $this->Form->control('specalisation');
             echo $this->Form->control('jobs_open');

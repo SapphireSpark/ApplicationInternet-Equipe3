@@ -17,7 +17,7 @@ class CandidaturesFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'offre_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'environment_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'user_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'slug' => ['type' => 'string', 'length' => 191, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
@@ -26,9 +26,9 @@ class CandidaturesFixture extends TestFixture
             'user_id' => ['type' => 'index', 'columns' => ['user_id'], 'length' => []],
         ],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['offre_id', 'user_id'], 'length' => []],
+            'primary' => ['type' => 'primary', 'columns' => ['environment_id', 'user_id'], 'length' => []],
             'candidatures_ibfk_1' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['users', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
-            'candidatures_ibfk_2' => ['type' => 'foreign', 'columns' => ['offre_id'], 'references' => ['offres', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'candidatures_ibfk_2' => ['type' => 'foreign', 'columns' => ['environment_id'], 'references' => ['offers', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -46,11 +46,11 @@ class CandidaturesFixture extends TestFixture
     {
         $this->records = [
             [
-                'offre_id' => 1,
+                'environment_id' => 1,
                 'user_id' => 1,
                 'slug' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-09-10 18:32:39',
-                'modified' => '2018-09-10 18:32:39'
+                'created' => '2018-09-10 20:33:10',
+                'modified' => '2018-09-10 20:33:10'
             ],
         ];
         parent::init();

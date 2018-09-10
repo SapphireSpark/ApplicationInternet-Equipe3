@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Candidatures Model
  *
- * @property \App\Model\Table\OffresTable|\Cake\ORM\Association\BelongsTo $Offres
+ * @property \App\Model\Table\OffersTable|\Cake\ORM\Association\BelongsTo $Offers
  * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
  *
  * @method \App\Model\Entity\Candidature get($primaryKey, $options = [])
@@ -42,8 +42,8 @@ class CandidaturesTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Offres', [
-            'foreignKey' => 'offre_id',
+        $this->belongsTo('Offers', [
+            'foreignKey' => 'environment_id',
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Users', [
@@ -78,7 +78,7 @@ class CandidaturesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['offre_id'], 'Offres'));
+        $rules->add($rules->existsIn(['environment_id'], 'Offers'));
         $rules->add($rules->existsIn(['user_id'], 'Users'));
 
         return $rules;

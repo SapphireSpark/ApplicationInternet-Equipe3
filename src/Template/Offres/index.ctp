@@ -8,8 +8,6 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Offre'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Milieux'), ['controller' => 'Milieux', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Milieux'), ['controller' => 'Milieux', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Candidatures'), ['controller' => 'Candidatures', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Candidature'), ['controller' => 'Candidatures', 'action' => 'add']) ?></li>
     </ul>
@@ -20,7 +18,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('milieu_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('environment_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('specalisation') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('jobs_open') ?></th>
@@ -34,7 +32,7 @@
             <?php foreach ($offres as $offre): ?>
             <tr>
                 <td><?= $this->Number->format($offre->id) ?></td>
-                <td><?= $offre->has('milieux') ? $this->Html->link($offre->milieux->name, ['controller' => 'Milieux', 'action' => 'view', $offre->milieux->id]) : '' ?></td>
+                <td><?= $this->Number->format($offre->environment_id) ?></td>
                 <td><?= h($offre->name) ?></td>
                 <td><?= h($offre->specalisation) ?></td>
                 <td><?= $this->Number->format($offre->jobs_open) ?></td>

@@ -8,8 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Candidature'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Offres'), ['controller' => 'Offres', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Offre'), ['controller' => 'Offres', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Offers'), ['controller' => 'Offers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Offer'), ['controller' => 'Offers', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
@@ -19,7 +19,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('offre_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('environment_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('slug') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
@@ -30,7 +30,7 @@
         <tbody>
             <?php foreach ($candidatures as $candidature): ?>
             <tr>
-                <td><?= $candidature->has('offre') ? $this->Html->link($candidature->offre->name, ['controller' => 'Offres', 'action' => 'view', $candidature->offre->id]) : '' ?></td>
+                <td><?= $this->Number->format($candidature->environment_id) ?></td>
                 <td><?= $candidature->has('user') ? $this->Html->link($candidature->user->id, ['controller' => 'Users', 'action' => 'view', $candidature->user->id]) : '' ?></td>
                 <td><?= h($candidature->slug) ?></td>
                 <td><?= h($candidature->created) ?></td>
