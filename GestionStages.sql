@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2018 at 06:33 PM
+-- Generation Time: Sep 10, 2018 at 08:38 PM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `Candidatures` (
-  `offre_id` int(11) NOT NULL,
+  `environment_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `slug` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
@@ -37,26 +37,60 @@ CREATE TABLE IF NOT EXISTS `Candidatures` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Milieux`
+-- Table structure for table `Environments`
 --
 
-CREATE TABLE IF NOT EXISTS `Milieux` (
+CREATE TABLE IF NOT EXISTS `Environments` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `slug` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modified` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `modified` datetime NOT NULL,
+  `adress` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `province` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `zipcode` varchar(6) COLLATE utf8_unicode_ci NOT NULL,
+  `expectations` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name_admin` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `telephone` int(9) NOT NULL,
+  `fax` int(9) NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `adress_admin` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `city_admin` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `province_admin` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `zipcode_admin` varchar(6) COLLATE utf8_unicode_ci NOT NULL,
+  `region` set('Bas-Saint-Laurent','Saguenay-Lac-Saint-Jean','Capitale-Nationale','Mauricie','Estrie','Montréal','Outaouais','Abitibi-Témiscamingue','Côte-Nord','Nord-du-Québec','Gaspésie-Îles-de-la-Madeleine','Chaudières-Appalaches','Laval','Lanaudière','Laurentides','Montérégie','Centre-du-Québec') COLLATE utf8_unicode_ci NOT NULL,
+  `precision_facilities` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `precision_task` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `other_remark` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `type_milieux` set('Public','Privé','Conventionné','Partenariat public/privé') COLLATE utf8_unicode_ci NOT NULL,
+  `type_family` set('Orthopédie','Perte d''autonomie fonctionnelle','Mixte') COLLATE utf8_unicode_ci NOT NULL,
+  `profile` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `info_solicitation` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `info_contract` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `remark` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `other_info` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `date_invitation` date NOT NULL,
+  `date_lastcall` date NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  `number_application` int(11) NOT NULL,
+  `other_cegep` tinyint(1) NOT NULL,
+  `type_establishment` set('CHSLD','CLSC','Centre hospitalier','Centre réadapation','Clinique privée','Autre (précisez dans Remarques)') COLLATE utf8_unicode_ci NOT NULL,
+  `type_client` enum('Test','test2') COLLATE utf8_unicode_ci NOT NULL,
+  `missions` set('Soins de clientèle externe. Hospitalisée et hébergée. Rééducation et renforcement au travail') COLLATE utf8_unicode_ci NOT NULL,
+  `trp` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Offres`
+-- Table structure for table `Offers`
 --
 
-CREATE TABLE IF NOT EXISTS `Offres` (
+CREATE TABLE IF NOT EXISTS `Offers` (
   `id` int(11) NOT NULL,
-  `milieu_id` int(11) NOT NULL,
+  `environment_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `specalisation` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `jobs_open` int(11) NOT NULL,
@@ -83,6 +117,13 @@ CREATE TABLE IF NOT EXISTS `Users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Users` (`id`, `last_name`, `first_name`, `program`, `age`, `slug`, `created`, `modified`) VALUES
+(0, 'Roy', 'Luc', 'Informatique', 22, 'Luc', '2018-09-10 20:12:46', '2018-09-10 20:12:46');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -90,22 +131,22 @@ CREATE TABLE IF NOT EXISTS `Users` (
 -- Indexes for table `Candidatures`
 --
 ALTER TABLE `Candidatures`
-  ADD PRIMARY KEY (`offre_id`,`user_id`),
+  ADD PRIMARY KEY (`environment_id`,`user_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `Milieux`
+-- Indexes for table `Environments`
 --
-ALTER TABLE `Milieux`
+ALTER TABLE `Environments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `Offres`
+-- Indexes for table `Offers`
 --
-ALTER TABLE `Offres`
+ALTER TABLE `Offers`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `milieu_id` (`milieu_id`),
-  ADD KEY `milieu_id_2` (`milieu_id`);
+  ADD UNIQUE KEY `milieu_id` (`environment_id`),
+  ADD KEY `milieu_id_2` (`environment_id`);
 
 --
 -- Indexes for table `Users`
@@ -118,14 +159,14 @@ ALTER TABLE `Users`
 --
 
 --
--- AUTO_INCREMENT for table `Milieux`
+-- AUTO_INCREMENT for table `Environments`
 --
-ALTER TABLE `Milieux`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+ALTER TABLE `Environments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `Offres`
+-- AUTO_INCREMENT for table `Offers`
 --
-ALTER TABLE `Offres`
+ALTER TABLE `Offers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
@@ -136,13 +177,19 @@ ALTER TABLE `Offres`
 --
 ALTER TABLE `Candidatures`
   ADD CONSTRAINT `candidatures_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `candidatures_ibfk_2` FOREIGN KEY (`offre_id`) REFERENCES `offres` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `candidatures_ibfk_2` FOREIGN KEY (`environment_id`) REFERENCES `offers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `Offres`
+-- Constraints for table `Environments`
 --
-ALTER TABLE `Offres`
-  ADD CONSTRAINT `offres_ibfk_1` FOREIGN KEY (`milieu_id`) REFERENCES `milieux` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `Environments`
+  ADD CONSTRAINT `environments_ibfk_1` FOREIGN KEY (`id`) REFERENCES `Candidatures` (`environment_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Offers`
+--
+ALTER TABLE `Offers`
+  ADD CONSTRAINT `offers_ibfk_1` FOREIGN KEY (`environment_id`) REFERENCES `Environments` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
