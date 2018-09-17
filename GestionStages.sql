@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2018 at 08:38 PM
+-- Generation Time: Sep 17, 2018 at 06:00 PM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -77,8 +77,8 @@ CREATE TABLE IF NOT EXISTS `Environments` (
   `number_application` int(11) NOT NULL,
   `other_cegep` tinyint(1) NOT NULL,
   `type_establishment` set('CHSLD','CLSC','Centre hospitalier','Centre réadapation','Clinique privée','Autre (précisez dans Remarques)') COLLATE utf8_unicode_ci NOT NULL,
-  `type_client` enum('Test','test2') COLLATE utf8_unicode_ci NOT NULL,
-  `missions` set('Soins de clientèle externe. Hospitalisée et hébergée. Rééducation et renforcement au travail') COLLATE utf8_unicode_ci NOT NULL,
+  `type_client` enum('UTRF','Soins de clientèle hébergée et hôpital de jour','Soins de clientèle hébergée et externe','Soins de clientèle externe. hospitalisée et hébergée. rééducation et renforcement au travail','Soins de clientèle externe','Soins clientèle hospitalisée','Soins clientèle hébergée. soins de clientèle en convalescence','Soins clientèle hébergée et hospitalisée','Soins clientèle hébergée et externe','Soins clientèle hébergé et possibilité de Centre de jour','Soins clientèle externe. rééducation au travail','Soins clientèle externe et interne','Soins clientèle externe et hospitalisée','Soins clientèle externe et hébergée','Soins clientèle externe et à domicile','Soins clientèle externe','Soins clientèle à domicile et en hébergement. Centre de jour','Soins clientèle à domicile et clientèle externe','Soins clientèle à domicile','Recherche clinique','Principalement ortho/rhumato. un peu de perte d''autonomie','Perte d''autonomie. orthopédie/rhumatologie. neuro. cardiorespiratoire','Perte d''autonomie. orthopédie/rhumatologie. neuro','Perte d''autonomie. orthopédie/rhumatologie','Perte d''autonomie. orthopédie/rhumato. neuro','Perte d''autonomie. ortho/rhumato. cardiorespiratoire','Perte d''autonomie. ortho/rhumato','Perte d''autonomie. ortho. cardio. neuro','Perte d''autonomie. neurologie (cas séquélaires et évolutifs)','Perte d''autonomie. neuro et quelques cas ortho','Perte d''autonomie. cardiorespiratoire. palliatif','Perte d''autonomie un peu de neuro et d''ortho','Perte d''autonomie et ortho/rhumato','Perte d''autonomie','Perte autonomie fonctionnelle','Orthopédie/rhumatologie. Perte d''Autonomie','Orthopédie/rhumatologie principalement') COLLATE utf8_unicode_ci NOT NULL,
+  `missions` set('UTRF','Soins de clientèle hébergée et hôpital de jour','Soins de clientèle hébergée et externe','Soins de clientèle externe. hospitalisée et hébergée. rééducation et renforcement au travail','Soins de clientèle externe','Soins clientèle hospitalisée','Soins clientèle hébergée. soins de clientèle en convalescence','Soins clientèle hébergée et hospitalisée','Soins clientèle hébergée et externe','Soins clientèle hébergée','Soins clientèle hébergé et possibilité de Centre de jour','Soins clientèle externe. rééducation au travail','Soins clientèle externe et interne','Soins clientèle externe et hospitalisée','Soins clientèle externe et hébergée','Soins clientèle externe et à domicile','Soins clientèle externe','Soins clientèle à domicile et en hébergement. Centre de jour','Soins clientèle à domicile et clientèle externe','Soins clientèle à domicile','Recherche clinique','Hôpital de jour','Centre de jour. soins de clientèle hébergée','Centre de jour et soins à domicile','Centre de jour et hôpital de jour','Centre de jour','CDJ et soins clientèle hébergée') COLLATE utf8_unicode_ci NOT NULL,
   `trp` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
