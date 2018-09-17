@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 17, 2018 at 06:00 PM
+-- Generation Time: Sep 17, 2018 at 07:50 PM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -19,6 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `GestionStages`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Admins`
+--
+
+CREATE TABLE IF NOT EXISTS `Admins` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -85,6 +99,20 @@ CREATE TABLE IF NOT EXISTS `Environments` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `MilieuxStages`
+--
+
+CREATE TABLE IF NOT EXISTS `MilieuxStages` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Offers`
 --
 
@@ -109,19 +137,21 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `id` int(11) NOT NULL,
   `last_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `first_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `program` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `age` int(11) NOT NULL,
   `slug` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `Users`
 --
 
-INSERT INTO `Users` (`id`, `last_name`, `first_name`, `program`, `age`, `slug`, `created`, `modified`) VALUES
-(0, 'Roy', 'Luc', 'Informatique', 22, 'Luc', '2018-09-10 20:12:46', '2018-09-10 20:12:46');
+INSERT INTO `Users` (`id`, `last_name`, `first_name`, `email`, `password`, `program`, `age`, `slug`, `created`, `modified`) VALUES
+(1, 'Roy', 'Luc', '', '', 'Informatique', 22, 'Luc', '2018-09-10 20:12:46', '2018-09-10 20:12:46');
 
 --
 -- Indexes for dumped tables
@@ -132,7 +162,7 @@ INSERT INTO `Users` (`id`, `last_name`, `first_name`, `program`, `age`, `slug`, 
 --
 ALTER TABLE `Candidatures`
   ADD PRIMARY KEY (`environment_id`,`user_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD UNIQUE KEY `user_id_2` (`user_id`);
 
 --
 -- Indexes for table `Environments`
@@ -169,6 +199,11 @@ ALTER TABLE `Environments`
 ALTER TABLE `Offers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
 -- Constraints for dumped tables
 --
 
@@ -176,8 +211,8 @@ ALTER TABLE `Offers`
 -- Constraints for table `Candidatures`
 --
 ALTER TABLE `Candidatures`
-  ADD CONSTRAINT `candidatures_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `candidatures_ibfk_2` FOREIGN KEY (`environment_id`) REFERENCES `offers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `candidatures_ibfk_2` FOREIGN KEY (`environment_id`) REFERENCES `offers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `candidatures_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Environments`
