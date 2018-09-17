@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 17, 2018 at 06:00 PM
+-- Generation Time: Sep 17, 2018 at 06:19 PM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -19,6 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `GestionStages`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Admins`
+--
+
+CREATE TABLE IF NOT EXISTS `Admins` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -85,6 +99,20 @@ CREATE TABLE IF NOT EXISTS `Environments` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `MilieuxStages`
+--
+
+CREATE TABLE IF NOT EXISTS `MilieuxStages` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Offers`
 --
 
@@ -109,6 +137,8 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `id` int(11) NOT NULL,
   `last_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `first_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `program` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `age` int(11) NOT NULL,
   `slug` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
@@ -120,8 +150,8 @@ CREATE TABLE IF NOT EXISTS `Users` (
 -- Dumping data for table `Users`
 --
 
-INSERT INTO `Users` (`id`, `last_name`, `first_name`, `program`, `age`, `slug`, `created`, `modified`) VALUES
-(0, 'Roy', 'Luc', 'Informatique', 22, 'Luc', '2018-09-10 20:12:46', '2018-09-10 20:12:46');
+INSERT INTO `Users` (`id`, `last_name`, `first_name`, `email`, `password`, `program`, `age`, `slug`, `created`, `modified`) VALUES
+(0, 'Roy', 'Luc', '', '', 'Informatique', 22, 'Luc', '2018-09-10 20:12:46', '2018-09-10 20:12:46');
 
 --
 -- Indexes for dumped tables
