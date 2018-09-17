@@ -49,8 +49,8 @@ class CandidaturesFixture extends TestFixture
                 'environment_id' => 1,
                 'user_id' => 1,
                 'slug' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-09-10 20:33:10',
-                'modified' => '2018-09-10 20:33:10'
+                'created' => '2018-09-17 18:12:08',
+                'modified' => '2018-09-17 18:12:08'
             ],
         ];
         parent::init();

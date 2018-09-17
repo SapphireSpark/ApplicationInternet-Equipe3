@@ -55,8 +55,8 @@ class OffersFixture extends TestFixture
                 'specalisation' => 'Lorem ipsum dolor sit amet',
                 'jobs_open' => 1,
                 'slug' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-09-10 20:33:11',
-                'modified' => '2018-09-10 20:33:11'
+                'created' => '2018-09-17 18:12:09',
+                'modified' => '2018-09-17 18:12:09'
             ],
         ];
         parent::init();

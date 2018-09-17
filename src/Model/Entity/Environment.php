@@ -25,7 +25,7 @@ use Cake\ORM\Entity;
  * @property string $city_admin
  * @property string $province_admin
  * @property string $zipcode_admin
- * @property string $region
+ * @property bool $region
  * @property string $precision_facilities
  * @property string $precision_task
  * @property string $other_remark
@@ -46,6 +46,7 @@ use Cake\ORM\Entity;
  * @property string $missions
  * @property string $trp
  *
+ * @property \App\Model\Entity\Candidature[] $candidatures
  * @property \App\Model\Entity\Offer[] $offers
  */
 class Environment extends Entity
@@ -99,6 +100,7 @@ class Environment extends Entity
         'type_client' => true,
         'missions' => true,
         'trp' => true,
+        'candidatures' => true,
         'offers' => true
     ];
 }

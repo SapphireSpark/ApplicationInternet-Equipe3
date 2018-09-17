@@ -21,16 +21,16 @@
     <h3><?= h($candidature->offre_id) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Offer') ?></th>
+            <td><?= $candidature->has('offer') ? $this->Html->link($candidature->offer->name, ['controller' => 'Offers', 'action' => 'view', $candidature->offer->id]) : '' ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('User') ?></th>
             <td><?= $candidature->has('user') ? $this->Html->link($candidature->user->id, ['controller' => 'Users', 'action' => 'view', $candidature->user->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Slug') ?></th>
             <td><?= h($candidature->slug) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Environment Id') ?></th>
-            <td><?= $this->Number->format($candidature->environment_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

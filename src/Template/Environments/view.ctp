@@ -11,6 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Environment'), ['action' => 'delete', $environment->id], ['confirm' => __('Are you sure you want to delete # {0}?', $environment->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Environments'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Environment'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Candidatures'), ['controller' => 'Candidatures', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Candidature'), ['controller' => 'Candidatures', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Offers'), ['controller' => 'Offers', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Offer'), ['controller' => 'Offers', 'action' => 'add']) ?> </li>
     </ul>
@@ -73,10 +75,6 @@
         <tr>
             <th scope="row"><?= __('Zipcode Admin') ?></th>
             <td><?= h($environment->zipcode_admin) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Region') ?></th>
-            <td><?= h($environment->region) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Precision Facilities') ?></th>
@@ -167,6 +165,10 @@
             <td><?= h($environment->date_lastcall) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Region') ?></th>
+            <td><?= $environment->region ? __('Yes') : __('No'); ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Active') ?></th>
             <td><?= $environment->active ? __('Yes') : __('No'); ?></td>
         </tr>
@@ -175,6 +177,35 @@
             <td><?= $environment->other_cegep ? __('Yes') : __('No'); ?></td>
         </tr>
     </table>
+    <div class="related">
+        <h4><?= __('Related Candidatures') ?></h4>
+        <?php if (!empty($environment->candidatures)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Environment Id') ?></th>
+                <th scope="col"><?= __('User Id') ?></th>
+                <th scope="col"><?= __('Slug') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($environment->candidatures as $candidatures): ?>
+            <tr>
+                <td><?= h($candidatures->environment_id) ?></td>
+                <td><?= h($candidatures->user_id) ?></td>
+                <td><?= h($candidatures->slug) ?></td>
+                <td><?= h($candidatures->created) ?></td>
+                <td><?= h($candidatures->modified) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Candidatures', 'action' => 'view', $candidatures->offre_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Candidatures', 'action' => 'edit', $candidatures->offre_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Candidatures', 'action' => 'delete', $candidatures->offre_id], ['confirm' => __('Are you sure you want to delete # {0}?', $candidatures->offre_id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
     <div class="related">
         <h4><?= __('Related Offers') ?></h4>
         <?php if (!empty($environment->offers)): ?>

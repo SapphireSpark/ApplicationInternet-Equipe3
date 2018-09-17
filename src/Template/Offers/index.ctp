@@ -8,6 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Offer'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Environments'), ['controller' => 'Environments', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Environment'), ['controller' => 'Environments', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="offers index large-9 medium-8 columns content">
@@ -30,7 +32,7 @@
             <?php foreach ($offers as $offer): ?>
             <tr>
                 <td><?= $this->Number->format($offer->id) ?></td>
-                <td><?= $this->Number->format($offer->environment_id) ?></td>
+                <td><?= $offer->has('environment') ? $this->Html->link($offer->environment->name, ['controller' => 'Environments', 'action' => 'view', $offer->environment->id]) : '' ?></td>
                 <td><?= h($offer->name) ?></td>
                 <td><?= h($offer->specalisation) ?></td>
                 <td><?= $this->Number->format($offer->jobs_open) ?></td>

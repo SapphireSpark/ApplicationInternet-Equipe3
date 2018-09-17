@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Environments Model
  *
- * @property |\Cake\ORM\Association\HasMany $Candidatures
+ * @property \App\Model\Table\CandidaturesTable|\Cake\ORM\Association\HasMany $Candidatures
  * @property \App\Model\Table\OffersTable|\Cake\ORM\Association\HasMany $Offers
  *
  * @method \App\Model\Entity\Environment get($primaryKey, $options = [])
@@ -156,7 +156,7 @@ class EnvironmentsTable extends Table
             ->notEmpty('zipcode_admin');
 
         $validator
-            ->scalar('region')
+            ->boolean('region')
             ->requirePresence('region', 'create')
             ->notEmpty('region');
 

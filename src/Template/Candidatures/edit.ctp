@@ -25,7 +25,7 @@
     <fieldset>
         <legend><?= __('Edit Candidature') ?></legend>
         <?php
-            echo $this->Form->control('environment_id');
+            echo $this->Form->control('environment_id', ['options' => $offers]);
             echo $this->Form->control('slug');
         ?>
     </fieldset>

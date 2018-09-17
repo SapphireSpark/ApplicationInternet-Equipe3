@@ -8,6 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Environment'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Candidatures'), ['controller' => 'Candidatures', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Candidature'), ['controller' => 'Candidatures', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Offers'), ['controller' => 'Offers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Offer'), ['controller' => 'Offers', 'action' => 'add']) ?></li>
     </ul>
@@ -16,11 +18,46 @@
     <h3><?= __('Environments') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
-            <tr>            
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>               
+            <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('slug') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('adress') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('city') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('province') ?></th>             
+                <th scope="col"><?= $this->Paginator->sort('province') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('zipcode') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('expectations') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('name_admin') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('telephone') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('fax') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('adress_admin') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('city_admin') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('province_admin') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('zipcode_admin') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('region') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('precision_facilities') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('precision_task') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('other_remark') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('type_milieux') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('type_family') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('profile') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('info_solicitation') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('info_contract') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('remark') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('other_info') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date_invitation') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date_lastcall') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('active') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('number_application') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('other_cegep') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('type_establishment') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('type_client') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('missions') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('trp') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>

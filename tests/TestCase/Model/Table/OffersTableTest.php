@@ -25,7 +25,7 @@ class OffersTableTest extends TestCase
      */
     public $fixtures = [
         'app.offers',
-        'app.milieux'
+        'app.environments'
     ];
 
     /**

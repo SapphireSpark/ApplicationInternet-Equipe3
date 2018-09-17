@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Offers Model
  *
- * @property |\Cake\ORM\Association\BelongsTo $Environments
+ * @property \App\Model\Table\EnvironmentsTable|\Cake\ORM\Association\BelongsTo $Environments
  *
  * @method \App\Model\Entity\Offer get($primaryKey, $options = [])
  * @method \App\Model\Entity\Offer newEntity($data = null, array $options = [])

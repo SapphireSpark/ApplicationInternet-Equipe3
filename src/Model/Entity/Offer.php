@@ -15,7 +15,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \App\Model\Entity\Milieux $milieux
+ * @property \App\Model\Entity\Environment $environment
  */
 class Offer extends Entity
 {
@@ -37,6 +37,6 @@ class Offer extends Entity
         'slug' => true,
         'created' => true,
         'modified' => true,
-        'milieux' => true
+        'environment' => true
     ];
 }

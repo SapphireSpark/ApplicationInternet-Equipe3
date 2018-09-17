@@ -30,7 +30,7 @@
         <tbody>
             <?php foreach ($candidatures as $candidature): ?>
             <tr>
-                <td><?= $this->Number->format($candidature->environment_id) ?></td>
+                <td><?= $candidature->has('offer') ? $this->Html->link($candidature->offer->name, ['controller' => 'Offers', 'action' => 'view', $candidature->offer->id]) : '' ?></td>
                 <td><?= $candidature->has('user') ? $this->Html->link($candidature->user->id, ['controller' => 'Users', 'action' => 'view', $candidature->user->id]) : '' ?></td>
                 <td><?= h($candidature->slug) ?></td>
                 <td><?= h($candidature->created) ?></td>
