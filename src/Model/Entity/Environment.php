@@ -25,12 +25,9 @@ use Cake\ORM\Entity;
  * @property string $city_admin
  * @property string $province_admin
  * @property string $zipcode_admin
- * @property bool $region
  * @property string $precision_facilities
  * @property string $precision_task
  * @property string $other_remark
- * @property string $type_milieux
- * @property string $type_family
  * @property string $profile
  * @property string $info_solicitation
  * @property string $info_contract
@@ -41,11 +38,12 @@ use Cake\ORM\Entity;
  * @property bool $active
  * @property int $number_application
  * @property bool $other_cegep
- * @property string $type_establishment
- * @property string $type_client
- * @property string $missions
+ * @property int $establishment_id
  * @property string $trp
+ * @property int $region_id
  *
+ * @property \App\Model\Entity\Establishment $establishment
+ * @property \App\Model\Entity\Region $region
  * @property \App\Model\Entity\Candidature[] $candidatures
  * @property \App\Model\Entity\Offer[] $offers
  */
@@ -80,12 +78,9 @@ class Environment extends Entity
         'city_admin' => true,
         'province_admin' => true,
         'zipcode_admin' => true,
-        'region' => true,
         'precision_facilities' => true,
         'precision_task' => true,
         'other_remark' => true,
-        'type_milieux' => true,
-        'type_family' => true,
         'profile' => true,
         'info_solicitation' => true,
         'info_contract' => true,
@@ -96,10 +91,11 @@ class Environment extends Entity
         'active' => true,
         'number_application' => true,
         'other_cegep' => true,
-        'type_establishment' => true,
-        'type_client' => true,
-        'missions' => true,
+        'establishment_id' => true,
         'trp' => true,
+        'region_id' => true,
+        'establishment' => true,
+        'region' => true,
         'candidatures' => true,
         'offers' => true
     ];

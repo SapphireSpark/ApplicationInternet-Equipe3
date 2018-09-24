@@ -27,12 +27,24 @@
             <td><?= h($user->first_name) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Email') ?></th>
+            <td><?= h($user->email) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Password') ?></th>
+            <td><?= h($user->password) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Program') ?></th>
             <td><?= h($user->program) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Slug') ?></th>
             <td><?= h($user->slug) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Role') ?></th>
+            <td><?= h($user->role) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

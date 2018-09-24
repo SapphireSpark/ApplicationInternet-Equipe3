@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \App\Model\Entity\Offer $offer
+ * @property \App\Model\Entity\Environment $environment
  * @property \App\Model\Entity\User $user
  */
 class Candidature extends Entity
@@ -31,7 +31,7 @@ class Candidature extends Entity
         'slug' => true,
         'created' => true,
         'modified' => true,
-        'offer' => true,
+        'environment' => true,
         'user' => true
     ];
 }

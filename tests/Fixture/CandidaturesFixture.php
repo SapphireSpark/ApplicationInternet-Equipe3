@@ -22,13 +22,11 @@ class CandidaturesFixture extends TestFixture
         'slug' => ['type' => 'string', 'length' => 191, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-        '_indexes' => [
-            'user_id' => ['type' => 'index', 'columns' => ['user_id'], 'length' => []],
-        ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['environment_id', 'user_id'], 'length' => []],
-            'candidatures_ibfk_1' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['users', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
-            'candidatures_ibfk_2' => ['type' => 'foreign', 'columns' => ['environment_id'], 'references' => ['offers', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'user_id_2' => ['type' => 'unique', 'columns' => ['user_id'], 'length' => []],
+            'environements_ibfk_3' => ['type' => 'foreign', 'columns' => ['environment_id'], 'references' => ['Environments', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'users_ibfk_3' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['Users', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -49,8 +47,8 @@ class CandidaturesFixture extends TestFixture
                 'environment_id' => 1,
                 'user_id' => 1,
                 'slug' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-09-17 18:12:08',
-                'modified' => '2018-09-17 18:12:08'
+                'created' => '2018-09-24 19:26:38',
+                'modified' => '2018-09-24 19:26:38'
             ],
         ];
         parent::init();

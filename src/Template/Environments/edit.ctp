@@ -14,6 +14,10 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Environments'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Establishments'), ['controller' => 'Establishments', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Establishment'), ['controller' => 'Establishments', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Regions'), ['controller' => 'Regions', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Region'), ['controller' => 'Regions', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Candidatures'), ['controller' => 'Candidatures', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Candidature'), ['controller' => 'Candidatures', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Offers'), ['controller' => 'Offers', 'action' => 'index']) ?></li>
@@ -41,12 +45,9 @@
             echo $this->Form->control('city_admin');
             echo $this->Form->control('province_admin');
             echo $this->Form->control('zipcode_admin');
-            echo $this->Form->control('region');
             echo $this->Form->control('precision_facilities');
             echo $this->Form->control('precision_task');
             echo $this->Form->control('other_remark');
-            echo $this->Form->control('type_milieux');
-            echo $this->Form->control('type_family');
             echo $this->Form->control('profile');
             echo $this->Form->control('info_solicitation');
             echo $this->Form->control('info_contract');
@@ -57,10 +58,9 @@
             echo $this->Form->control('active');
             echo $this->Form->control('number_application');
             echo $this->Form->control('other_cegep');
-            echo $this->Form->control('type_establishment');
-            echo $this->Form->control('type_client');
-            echo $this->Form->control('missions');
+            echo $this->Form->control('establishment_id', ['options' => $establishments]);
             echo $this->Form->control('trp');
+            echo $this->Form->control('region_id', ['options' => $regions]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

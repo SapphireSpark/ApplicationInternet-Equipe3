@@ -11,8 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Candidature'), ['action' => 'delete', $candidature->offre_id], ['confirm' => __('Are you sure you want to delete # {0}?', $candidature->offre_id)]) ?> </li>
         <li><?= $this->Html->link(__('List Candidatures'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Candidature'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Offers'), ['controller' => 'Offers', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Offer'), ['controller' => 'Offers', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Environments'), ['controller' => 'Environments', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Environment'), ['controller' => 'Environments', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
     </ul>
@@ -21,8 +21,8 @@
     <h3><?= h($candidature->offre_id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Offer') ?></th>
-            <td><?= $candidature->has('offer') ? $this->Html->link($candidature->offer->name, ['controller' => 'Offers', 'action' => 'view', $candidature->offer->id]) : '' ?></td>
+            <th scope="row"><?= __('Environment') ?></th>
+            <td><?= $candidature->has('environment') ? $this->Html->link($candidature->environment->name, ['controller' => 'Environments', 'action' => 'view', $candidature->environment->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('User') ?></th>

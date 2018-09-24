@@ -8,8 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Candidature'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Offers'), ['controller' => 'Offers', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Offer'), ['controller' => 'Offers', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Environments'), ['controller' => 'Environments', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Environment'), ['controller' => 'Environments', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
@@ -30,7 +30,7 @@
         <tbody>
             <?php foreach ($candidatures as $candidature): ?>
             <tr>
-                <td><?= $candidature->has('offer') ? $this->Html->link($candidature->offer->name, ['controller' => 'Offers', 'action' => 'view', $candidature->offer->id]) : '' ?></td>
+                <td><?= $candidature->has('environment') ? $this->Html->link($candidature->environment->name, ['controller' => 'Environments', 'action' => 'view', $candidature->environment->id]) : '' ?></td>
                 <td><?= $candidature->has('user') ? $this->Html->link($candidature->user->id, ['controller' => 'Users', 'action' => 'view', $candidature->user->id]) : '' ?></td>
                 <td><?= h($candidature->slug) ?></td>
                 <td><?= h($candidature->created) ?></td>

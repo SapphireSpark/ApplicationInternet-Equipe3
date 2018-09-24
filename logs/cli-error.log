@@ -1,0 +1,426 @@
+2018-09-17 20:03:13 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-17 20:03:29 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-17 20:04:16 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-17 20:04:58 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-17 20:36:54 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-17 20:37:02 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-17 20:38:26 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-17 20:38:35 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-24 17:37:00 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-24 17:37:02 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.al' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'al', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('al', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('al')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('al')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
+2018-09-24 17:37:09 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-24 19:05:20 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-24 19:05:24 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-24 19:12:50 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-24 19:12:58 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-24 19:13:52 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.region' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'region', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('region', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('region')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('Region')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
+2018-09-24 19:25:08 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.region' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'region', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('region', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('region')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('Region')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
+2018-09-24 19:25:15 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-24 19:25:20 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-24 19:25:55 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-24 19:26:01 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-24 19:26:28 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(253): Bake\Shell\Task\TemplateTask->main('MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\TemplateTask->all()
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-09-24 19:26:39 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.milieux_stages' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'milieux_stages', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('milieux_stages', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('milieux_stages')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'milieux_stages', 'MilieuxStages')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('MilieuxStages')
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(170): Bake\Shell\Task\ModelTask->main('MilieuxStages')
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\Task\ModelTask->all()
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-09-24 19:28:28 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionstages.region' doesn't exist in C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'region', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('region', Array)
+#2 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('region')
+#3 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#6 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('region')
+#7 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#9 C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 C:\Program Files (x86)\Ampps\www\GestionStages\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+

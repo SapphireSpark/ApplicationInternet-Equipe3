@@ -17,6 +17,8 @@ class EnvironmentsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.environments',
+        'app.establishments',
+        'app.regions',
         'app.candidatures',
         'app.offers'
     ];

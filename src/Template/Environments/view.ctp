@@ -11,6 +11,10 @@
         <li><?= $this->Form->postLink(__('Delete Environment'), ['action' => 'delete', $environment->id], ['confirm' => __('Are you sure you want to delete # {0}?', $environment->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Environments'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Environment'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Establishments'), ['controller' => 'Establishments', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Establishment'), ['controller' => 'Establishments', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Regions'), ['controller' => 'Regions', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Region'), ['controller' => 'Regions', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Candidatures'), ['controller' => 'Candidatures', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Candidature'), ['controller' => 'Candidatures', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Offers'), ['controller' => 'Offers', 'action' => 'index']) ?> </li>
@@ -89,14 +93,6 @@
             <td><?= h($environment->other_remark) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Type Milieux') ?></th>
-            <td><?= h($environment->type_milieux) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Type Family') ?></th>
-            <td><?= h($environment->type_family) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Profile') ?></th>
             <td><?= h($environment->profile) ?></td>
         </tr>
@@ -117,20 +113,16 @@
             <td><?= h($environment->other_info) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Type Establishment') ?></th>
-            <td><?= h($environment->type_establishment) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Type Client') ?></th>
-            <td><?= h($environment->type_client) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Missions') ?></th>
-            <td><?= h($environment->missions) ?></td>
+            <th scope="row"><?= __('Establishment') ?></th>
+            <td><?= $environment->has('establishment') ? $this->Html->link($environment->establishment->type, ['controller' => 'Establishments', 'action' => 'view', $environment->establishment->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Trp') ?></th>
             <td><?= h($environment->trp) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Region') ?></th>
+            <td><?= $environment->has('region') ? $this->Html->link($environment->region->id, ['controller' => 'Regions', 'action' => 'view', $environment->region->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
@@ -163,10 +155,6 @@
         <tr>
             <th scope="row"><?= __('Date Lastcall') ?></th>
             <td><?= h($environment->date_lastcall) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Region') ?></th>
-            <td><?= $environment->region ? __('Yes') : __('No'); ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Active') ?></th>

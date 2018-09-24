@@ -20,6 +20,9 @@ class EnvironmentsController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Establishments', 'Regions']
+        ];
         $environments = $this->paginate($this->Environments);
 
         $this->set(compact('environments'));
@@ -35,7 +38,7 @@ class EnvironmentsController extends AppController
     public function view($id = null)
     {
         $environment = $this->Environments->get($id, [
-            'contain' => ['Candidatures', 'Offers']
+            'contain' => ['Establishments', 'Regions', 'Candidatures', 'Offers']
         ]);
 
         $this->set('environment', $environment);
@@ -58,7 +61,9 @@ class EnvironmentsController extends AppController
             }
             $this->Flash->error(__('The environment could not be saved. Please, try again.'));
         }
-        $this->set(compact('environment'));
+        $establishments = $this->Environments->Establishments->find('list', ['limit' => 200]);
+        $regions = $this->Environments->Regions->find('list', ['limit' => 200]);
+        $this->set(compact('environment', 'establishments', 'regions'));
     }
 
     /**
@@ -82,7 +87,9 @@ class EnvironmentsController extends AppController
             }
             $this->Flash->error(__('The environment could not be saved. Please, try again.'));
         }
-        $this->set(compact('environment'));
+        $establishments = $this->Environments->Establishments->find('list', ['limit' => 200]);
+        $regions = $this->Environments->Regions->find('list', ['limit' => 200]);
+        $this->set(compact('environment', 'establishments', 'regions'));
     }
 
     /**

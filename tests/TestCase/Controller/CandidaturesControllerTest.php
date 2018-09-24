@@ -17,7 +17,7 @@ class CandidaturesControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.candidatures',
-        'app.offers',
+        'app.environments',
         'app.users'
     ];
 

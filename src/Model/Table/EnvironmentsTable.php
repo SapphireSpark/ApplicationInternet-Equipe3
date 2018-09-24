@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Environments Model
  *
+ * @property \App\Model\Table\EstablishmentsTable|\Cake\ORM\Association\BelongsTo $Establishments
+ * @property \App\Model\Table\RegionsTable|\Cake\ORM\Association\BelongsTo $Regions
  * @property \App\Model\Table\CandidaturesTable|\Cake\ORM\Association\HasMany $Candidatures
  * @property \App\Model\Table\OffersTable|\Cake\ORM\Association\HasMany $Offers
  *
@@ -42,6 +44,14 @@ class EnvironmentsTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->belongsTo('Establishments', [
+            'foreignKey' => 'establishment_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Regions', [
+            'foreignKey' => 'region_id',
+            'joinType' => 'INNER'
+        ]);
         $this->hasMany('Candidatures', [
             'foreignKey' => 'environment_id'
         ]);
@@ -156,11 +166,6 @@ class EnvironmentsTable extends Table
             ->notEmpty('zipcode_admin');
 
         $validator
-            ->boolean('region')
-            ->requirePresence('region', 'create')
-            ->notEmpty('region');
-
-        $validator
             ->scalar('precision_facilities')
             ->maxLength('precision_facilities', 255)
             ->requirePresence('precision_facilities', 'create')
@@ -177,16 +182,6 @@ class EnvironmentsTable extends Table
             ->maxLength('other_remark', 255)
             ->requirePresence('other_remark', 'create')
             ->notEmpty('other_remark');
-
-        $validator
-            ->scalar('type_milieux')
-            ->requirePresence('type_milieux', 'create')
-            ->notEmpty('type_milieux');
-
-        $validator
-            ->scalar('type_family')
-            ->requirePresence('type_family', 'create')
-            ->notEmpty('type_family');
 
         $validator
             ->scalar('profile')
@@ -244,21 +239,6 @@ class EnvironmentsTable extends Table
             ->notEmpty('other_cegep');
 
         $validator
-            ->scalar('type_establishment')
-            ->requirePresence('type_establishment', 'create')
-            ->notEmpty('type_establishment');
-
-        $validator
-            ->scalar('type_client')
-            ->requirePresence('type_client', 'create')
-            ->notEmpty('type_client');
-
-        $validator
-            ->scalar('missions')
-            ->requirePresence('missions', 'create')
-            ->notEmpty('missions');
-
-        $validator
             ->scalar('trp')
             ->maxLength('trp', 255)
             ->requirePresence('trp', 'create')
@@ -277,6 +257,8 @@ class EnvironmentsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['email']));
+        $rules->add($rules->existsIn(['establishment_id'], 'Establishments'));
+        $rules->add($rules->existsIn(['region_id'], 'Regions'));
 
         return $rules;
     }

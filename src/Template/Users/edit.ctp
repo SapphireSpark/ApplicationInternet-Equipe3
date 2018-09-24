@@ -25,9 +25,12 @@
         <?php
             echo $this->Form->control('last_name');
             echo $this->Form->control('first_name');
+            echo $this->Form->control('email');
+            echo $this->Form->control('password');
             echo $this->Form->control('program');
             echo $this->Form->control('age');
             echo $this->Form->control('slug');
+            echo $this->Form->control('role');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
