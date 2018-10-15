@@ -8,6 +8,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Milieux'), ['action' => 'add']) ?></li>
+         <li><?= $this->Html->link(__('Send email'), ['controller' => 'Emails', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="milieux index large-9 medium-8 columns content">
@@ -19,7 +20,7 @@
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('city') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('province') ?></th>
-                
+               
                 <th scope="col"><?= $this->Paginator->sort('active') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>

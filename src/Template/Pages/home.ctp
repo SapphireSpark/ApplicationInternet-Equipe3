@@ -12,6 +12,7 @@
  * @since         0.10.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
+/*
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
@@ -276,3 +277,8 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 </body>
 </html>
+*/
+
+header('Location: GestionStages/environments'); 
+
+?>
