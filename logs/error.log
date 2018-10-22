@@ -1715,3 +1715,13 @@ Stack Trace:
 #34 {main}
 
 
+2018-10-22 17:33:52 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\Program Files (x86)\Ampps\www\GestionStages\vendor\cakephp\cakephp\src\Controller\ComponentRegistry.php, line 15]
+Request URL: /
+Referer URL: http://localhost/
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
